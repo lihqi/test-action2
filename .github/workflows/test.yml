@@ -1,13 +1,14 @@
 name: test
+on: 
+  push:
+    branches: 
+    - master
 
-on: [push]
 
 jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@master
       - name: clone
         run: |
         git clone https://github.com/ant-design/ant-design 
